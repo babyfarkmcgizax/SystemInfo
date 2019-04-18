@@ -1,0 +1,17 @@
+# System Information Utility
+# Shell program to give user choice of System Information to show
+# CPU Information
+
+
+echo "*******************************************************************">.ll
+echo  "                       CPU INFORMATION                           ">>.ll
+echo "******************************************************************">>.ll
+echo>>.ll
+echo>>.ll
+echo>>.ll
+echo>>.ll
+cat /proc/cpuinfo >>.ll
+cat .ll|less
+echo   "Press any key, then hit Enter to continue, ........."
+read a
+sh info.sh

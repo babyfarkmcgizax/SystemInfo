@@ -1,0 +1,20 @@
+# System Information Utility
+# Shell program to give user choice of System Information to show
+# Memory Information
+
+clear
+echo >.ll
+echo "********************************************************************">.ll
+echo "                         MEMORY INFORMATION                       ">>.ll
+echo "*******************************************************************">>.ll
+echo>>.ll
+echo>>.ll
+echo>>.ll
+free>>.ll
+echo>>.ll
+echo>>.ll
+cat /proc/meminfo >>.ll
+cat .ll | less
+echo   "Press any key, then hit Enter to continue, ........."
+read a
+sh info.sh

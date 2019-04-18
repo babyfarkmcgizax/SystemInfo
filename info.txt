@@ -1,0 +1,40 @@
+# System Information Utility
+# Shell program to give user choice of System Information to show
+# Main entry point for whole program - info.sh
+# Cases lead to more detailed information or Basic overview
+clear
+echo  "***************************************************************"
+echo
+echo  "    WELCOME TO SYSTEM INFORMATION UTILITY by Emma Greening    "
+echo
+echo  "***************************************************************"
+echo
+echo  "Please input your system info choice, then hit Enter........"
+echo  
+echo  "1 - Basic System Overview "
+echo  "2 - Cpu information "
+echo  "3 - Memory /RAM information "
+echo  "4 - Motherboard/BIOS information "
+echo  "5 - Hard Drive information "
+echo  "6 - Filesystem information"
+echo  "7 - Network information"
+echo
+echo "Or Press Any Other Key to Exit............"
+read a
+case $a in
+	1) sh basic.sh
+	;;
+	2) sh cpu.sh
+	;;
+	3) sh mem.sh
+	;;
+	4) sh mb.sh
+	;; 		
+	5) sh hard.sh
+	;;
+	6) sh fs.sh
+	;;
+	7) sh net.sh
+	;;
+
+esac

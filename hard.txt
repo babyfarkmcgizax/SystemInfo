@@ -1,0 +1,15 @@
+# System Information Utility
+# Shell program to give user choice of System Information to show
+# Hard Drive Information
+
+clear
+echo "***************************************************************************"
+echo "                         HARD DRIVE INFORMATION                           "
+echo "***************************************************************************"
+echo
+fdisk -l
+echo
+echo 
+echo   "Press any key, then hit Enter to continue, ........."
+read a
+sh info.shhard

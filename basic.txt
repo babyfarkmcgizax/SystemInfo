@@ -1,0 +1,43 @@
+# System Information Utility
+# Shell program to give user choice of System Information to show
+# Basic System Information - Computer name, OS, Architecture, Uptime, CPU and Memory
+# Use of grep to filter results
+
+clear
+echo "*************************************************************************"
+echo "                            BASIC SYSTEM INFO                     "
+echo "*************************************************************************"
+echo
+echo Computer Name ___________________________________________________________
+cat /etc/hostname 
+echo
+echo
+echo Operating System ________________________________________________________
+cat /proc/version
+read a
+clear
+echo
+echo Architecture ____________________________________________________________
+uname -m
+echo
+echo
+echo System UPtime ___________________________________________________________
+serveruptime=`uptime|awk ‘{print $3,$4}’| sed ‘s/,//’|grep “day”`;
+if [[ -z “$serveruptime” ]]; then 
+   serveruptime=`uptime|awk ‘{print $3}’| sed ‘s/,//’`; 
+else 
+   :; 
+fi;
+echo
+echo
+echo CPU _____________________________________________________________________
+cat /proc/cpuinfo | grep -e "model" -e "cpu M"
+echo
+echo
+echo MEMORY __________________________________________________________________
+free
+echo
+echo   "Press any key, then hit Enter to continue, ........."
+read tt
+#Key entry reverts back to main menu (info.sh)
+sh info.sh

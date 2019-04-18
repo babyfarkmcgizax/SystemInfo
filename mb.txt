@@ -1,0 +1,16 @@
+# System Information Utility
+# Shell program to give user choice of System Information to show
+# Motherboard/BIOS Information
+
+clear
+echo "*******************************************************************">.ll
+echo "                      MOTHERBOARD/BIOS INFORMATION                 ">>.ll
+echo "*******************************************************************">>.ll
+echo>>.ll
+echo>>.ll
+echo>>.ll
+dmidecode>>.ll
+cat .ll | less
+echo   "Press any key, then hit Enter to continue, ........."
+read a
+sh info.sh
